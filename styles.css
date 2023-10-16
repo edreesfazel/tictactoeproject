@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1b1b1b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff; /* Pure white text for better contrast */
+}
+
+.board {
+    display: none;
+    grid-template-columns: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.board > div {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #2d2d2d, #3c3c3c); /* Subtle gradient for depth */
+    border: 2px solid #4a4a4a;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadows for depth */
+}
+
+.board > div:hover {
+    background-color: #202020;
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly deeper shadow on hover */
+}
+
+#restartBtn, #startGameBtn {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, red, blue); /* Gradient blending primary colors */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#restartBtn:hover, #startGameBtn:hover {
+    background-color: yellow; /* The third primary color on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#turnDisplay {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#playerInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+#playerInputs label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#playerInputs input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4a4a4a;
+    color: #fff;
+    background-color: #2d2d2d;
+    width: 200px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    background: linear-gradient(135deg, red, blue); /* Gradient blending primary colors for input */
+    border: 2px solid #4a4a4a;
+    border-radius: 5px;
+    color: #e6e6e6;
+    margin: 10px 0;
+    font-size: 16px;
+    width: 250px;
+    transition: border-color 0.3s, transform 0.2s;
+}
+
+input[type="text"]:hover {
+    border-color: yellow; /* The third primary color on hover */
+    transform: scale(1.02);
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: yellow; /* The third primary color on focus */
+    transform: scale(1.03);
+    background-color: #333; /* Darker shade on focus for contrast */
+}
+
+input[type="text"]::placeholder {
+    color: #888;
+}
+
+h1 {
+    font-size: 2.5em; /* Make the title larger */
+    text-transform: uppercase; /* All caps for a more defined look */
+    margin-bottom: 25px; /* Add some space between the title and board */
+    letter-spacing: 2px; /* Space out the characters a bit */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* A slight shadow for depth */
+    color: #e6e6e6; /* Light text color for contrast */
+    background: linear-gradient(135deg, red, blue); /* Gradient background for continuity with the theme */
+    display: inline-block; /* Make the gradient background fit the text */
+    padding: 10px 20px; /* Add some padding to the title */
+    border-radius: 8px; /* Rounded corners to match other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Shadow to give a raised effect */
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+h1:hover {
+    transform: translateY(-5px); /* Lift the title slightly on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.25); /* Deeper shadow on hover for a lifting effect */
+}
